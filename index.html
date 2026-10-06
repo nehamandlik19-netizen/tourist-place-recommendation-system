@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelMate | Discover Your Perfect Destination</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top-header">
+
+        <div class="header-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="brand">
+                <span class="brand-icon">✈</span>
+                <span>TravelMate</span>
+            </a>
+
+            <!-- Travel Highlight -->
+            <div class="travel-highlight">
+
+                <div class="travel-highlight-icon">
+                    ✦
+                </div>
+
+                <div class="travel-highlight-text">
+                    <strong>Plan your next escape</strong>
+                    <span>Discover places made for you</span>
+                </div>
+
+                <span class="travel-highlight-arrow">
+                    →
+                </span>
+
+            </div>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+
+                <!-- Guest -->
+                <div id="guestActions" class="guest-only header-auth-actions">
+
+                    <a href="pages/login.html" class="header-login">
+                        Login
+                    </a>
+
+                    <a href="pages/register.html" class="header-register">
+                        Register
+                    </a>
+
+                </div>
+
+                <!-- Logged In -->
+                <div id="userActions" class="user-only header-auth-actions hidden">
+
+                    <a href="pages/dashboard.html" class="header-login">
+                        Dashboard
+                    </a>
+
+                    <a href="pages/favorites.html" class="header-register">
+                        ♥ Favourite
+                    </a>
+
+                    <button class="logout-button header-logout">
+                        Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CATEGORY NAVIGATION ================= -->
+
+    <nav class="category-bar">
+
+        <div class="category-container">
+
+            <a href="index.html" class="active">
+                Home
+            </a>
+
+            <a href="#popular">
+                Popular
+            </a>
+
+            <a href="#categories">
+                Explore by State
+            </a>
+
+            <a href="pages/recommendations.html">
+                Destinations
+            </a>
+
+            <a href="pages/preferences.html">
+                Personalized Trips
+            </a>
+
+            <a href="pages/favorites.html">
+                ♥ Favourite
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero-section">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <div class="hero-eyebrow">
+                ✦ EXPLORE • DISCOVER • TRAVEL ✦
+            </div>
+
+            <h1>
+                Discover Your
+                <br>
+                Perfect Destination
+            </h1>
+
+            <p>
+                Find beautiful places, exciting experiences and
+                destinations that match your travel style.
+            </p>
+
+            <!-- HERO SEARCH FORM -->
+
+            <form id="heroSearchForm" class="hero-search">
+
+                <div class="hero-search-icon">
+                    🔎
+                </div>
+
+                <input
+                    type="text"
+                    id="heroSearchInput"
+                    placeholder="Where do you want to go?"
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Search
+                    <span>→</span>
+                </button>
+
+            </form>
+
+            <!-- Quick Search Suggestions -->
+
+            <div class="quick-search">
+
+                <span>Popular searches:</span>
+
+                <a href="pages/recommendations.html?search=Goa">
+                    Goa
+                </a>
+
+                <a href="pages/recommendations.html?search=Manali">
+                    Manali
+                </a>
+
+                <a href="pages/recommendations.html?search=Agra">
+                    Agra
+                </a>
+
+                <a href="pages/recommendations.html?search=Rajasthan">
+                    Rajasthan
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= HERO STATS ================= -->
+
+        <div class="hero-stats">
+
+            <div class="hero-stat">
+
+                <strong>50+</strong>
+
+                <span>
+                    Destinations
+                </span>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <strong>6</strong>
+
+                <span>
+                    Travel Categories
+                </span>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <strong>4.5+</strong>
+
+                <span>
+                    Top Rated Places
+                </span>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <strong>100%</strong>
+
+                <span>
+                    Personalized
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= POPULAR DESTINATIONS ================= -->
+
+    <section id="popular" class="popular-section">
+
+        <div class="section-heading-row">
+
+            <div>
+
+                <span class="section-eyebrow">
+                    MOST LOVED PLACES
+                </span>
+
+                <h2>
+                    Popular Destinations
+                </h2>
+
+                <p>
+                    Explore destinations that travellers love the most.
+                </p>
+
+            </div>
+
+            <a href="pages/recommendations.html" class="view-all-link">
+                View All →
+            </a>
+
+        </div>
+
+        <div id="popularContainer" class="destination-grid"></div>
+
+    </section>
+
+
+    <!-- ================= CATEGORY SECTION ================= -->
+
+    <section id="categories" class="category-section">
+
+        <div class="category-heading">
+
+            <span class="section-eyebrow">
+                TRAVEL YOUR WAY
+            </span>
+
+            <h2>
+                Explore by Category
+            </h2>
+
+            <p>
+                Choose the type of experience you want.
+            </p>
+
+        </div>
+
+        <div class="category-grid">
+
+    <!-- Nature -->
+    <a href="pages/recommendations.html?category=Nature" class="travel-category-card">
+        <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt="Nature" loading="lazy">
+        </div>
+        <div class="category-card-content">
+            <h3>Nature</h3>
+            <p>Mountains, waterfalls and peaceful landscapes</p>
+            <span class="category-explore">Explore Nature →</span>
+        </div>
+    </a>
+
+    <!-- Beaches -->
+    <a href="pages/recommendations.html?category=Beach" class="travel-category-card">
+        <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="Beaches" loading="lazy">
+        </div>
+        <div class="category-card-content">
+            <h3>Beaches</h3>
+            <p>Relax by beautiful beaches and coastlines</p>
+            <span class="category-explore">Explore Beaches →</span>
+        </div>
+    </a>
+
+    <!-- Historical -->
+    <a href="pages/recommendations.html?category=Historical" class="travel-category-card">
+        <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=700&q=80" alt="Historical places" loading="lazy">
+        </div>
+        <div class="category-card-content">
+            <h3>Historical</h3>
+            <p>Explore forts, palaces and heritage places</p>
+            <span class="category-explore">Explore Heritage →</span>
+        </div>
+    </a>
+
+    <!-- Adventure -->
+    <a href="pages/recommendations.html?category=Adventure" class="travel-category-card">
+        <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=700&q=80" alt="Adventure" loading="lazy">
+        </div>
+        <div class="category-card-content">
+            <h3>Adventure</h3>
+            <p>Trekking, camping and exciting activities</p>
+            <span class="category-explore">Find Adventure →</span>
+        </div>
+    </a>
+
+    <!-- Wildlife -->
+    <a href="pages/recommendations.html?category=Wildlife" class="travel-category-card">
+        <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?auto=format&fit=crop&w=700&q=80" alt="Wildlife" loading="lazy">
+        </div>
+        <div class="category-card-content">
+            <h3>Wildlife</h3>
+            <p>Discover wildlife and natural habitats</p>
+            <span class="category-explore">Explore Wildlife →</span>
+        </div>
+    </a>
+
+    <!-- Religious -->
+    <a href="pages/recommendations.html?category=Religious" class="travel-category-card">
+        <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=700&q=80" alt="Religious places" loading="lazy">
+        </div>
+        <div class="category-card-content">
+            <h3>Religious</h3>
+            <p>Visit famous temples and spiritual places</p>
+            <span class="category-explore">Explore Spiritual Places →</span>
+        </div>
+    </a>
+
+</div>
+
+
+    </section>
+
+
+    <!-- ================= WHY TRAVELMATE ================= -->
+
+    <section class="why-section">
+
+        <div class="why-container">
+
+            <div class="why-content">
+
+                <span class="section-eyebrow">
+                    WHY TRAVELMATE?
+                </span>
+
+                <h2>
+                    Your journey should feel
+                    <span>personal.</span>
+                </h2>
+
+                <p>
+                    TravelMate helps you discover destinations based
+                    on your interests, budget, activities and preferred
+                    travel season.
+                </p>
+
+                <a href="pages/preferences.html" class="why-button">
+                    Find My Perfect Trip →
+                </a>
+
+            </div>
+
+            <div class="why-features">
+
+                <div class="why-feature">
+                    <div class="why-feature-icon">🎯</div>
+                    <div>
+                        <h3>Personalized</h3>
+                        <p>Get recommendations based on your preferences.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <div class="why-feature-icon">💰</div>
+                    <div>
+                        <h3>Budget Friendly</h3>
+                        <p>Discover destinations that fit your budget.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <div class="why-feature-icon">🧭</div>
+                    <div>
+                        <h3>Easy Discovery</h3>
+                        <p>Search places, explore details and save favourites.</p>
+                    </div>
+                </div>
+
+                <div class="why-feature">
+                    <div class="why-feature-icon">❤️</div>
+                    <div>
+                        <h3>Save Favourites</h3>
+                        <p>Keep your favourite destinations in one place.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="home-cta">
+
+        <div class="home-cta-content">
+
+            <span>READY FOR YOUR NEXT ADVENTURE?</span>
+
+            <h2>Where will you go next?</h2>
+
+            <p>
+                Let TravelMate help you find a destination
+                that matches your travel style.
+            </p>
+
+            <a href="pages/preferences.html" class="cta-button">
+                Start Exploring →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-logo">
+                    <span class="logo-icon">✈</span> TravelMate
+                </a>
+                <p class="footer-desc">
+                    Your intelligent travel partner. Discover personalized destinations, hidden gems, and tailored travel itineraries across India.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Twitter">🌐</a>
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Facebook">💬</a>
+                    <a href="#" aria-label="GitHub">💻</a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/recommendations.html">All Destinations</a></li>
+                    <li><a href="pages/preferences.html">Personalized Planner</a></li>
+                    <li><a href="pages/favorites.html">Saved Places</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Categories -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="pages/recommendations.html?category=Nature">Nature & Hills</a></li>
+                    <li><a href="pages/recommendations.html?category=Beach">Beaches & Coastal</a></li>
+                    <li><a href="pages/recommendations.html?category=Historical">Heritage & Forts</a></li>
+                    <li><a href="pages/recommendations.html?category=Adventure">Adventure Trips</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Account & Action -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Account</h4>
+                <ul class="footer-links">
+                    <li><a href="pages/dashboard.html">Dashboard</a></li>
+                    <li>
+                        <button class="logout-button footer-logout-btn">
+                            Logout
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="footer-cta-wrapper">
+                    <a href="pages/preferences.html" class="footer-cta-btn">
+                        Get Recommendations →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Copyright Line -->
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-container">
+                <p>© 2026 TravelMate — Tourist Place Recommendation System</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script type="module" src="js/common.js"></script>
+    <script type="module" src="js/home.js"></script>
+    <script type="module" src="js/auth.js"></script>
+
+    <!-- HERO SEARCH JS -->
+    <script>
+        const heroSearchForm = document.getElementById("heroSearchForm");
+        const heroSearchInput = document.getElementById("heroSearchInput");
+
+        if (heroSearchForm) {
+            heroSearchForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const searchValue = heroSearchInput.value.trim();
+
+                if (!searchValue) {
+                    heroSearchInput.focus();
+                    return;
+                }
+
+                window.location.href =
+                    "pages/recommendations.html?search=" + encodeURIComponent(searchValue);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
