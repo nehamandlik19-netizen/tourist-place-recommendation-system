@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TravelMate | Find Your Trip</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+<body>
+
+<header class="top-header">
+
+    <div class="header-container">
+
+        <a href="../index.html" class="brand">
+            <span class="brand-icon">✈</span>
+            TravelMate
+        </a>
+
+        <form id="globalSearchForm"
+              class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                id="globalSearch"
+                type="text"
+                placeholder="Search destinations, cities and experiences..."
+            >
+
+        </form>
+
+        <div class="header-actions">
+
+            <a href="dashboard.html"
+               class="header-link">
+                Dashboard
+            </a>
+
+            <a href="favorites.html"
+               class="header-link">
+                ♡ Favorites
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<nav class="category-bar">
+
+    <div class="category-container">
+
+        <a href="../index.html">Home</a>
+
+        <a class="active"
+           href="preferences.html">
+            Personalized Trips
+        </a>
+
+        <a href="recommendations.html">
+            Destinations
+        </a>
+
+        <a href="recommendations.html?category=Nature">
+            Nature
+        </a>
+
+        <a href="recommendations.html?category=Beach">
+            Beaches
+        </a>
+
+        <a href="recommendations.html?category=Adventure">
+            Adventure
+        </a>
+
+    </div>
+
+</nav>
+
+
+<main class="preference-page">
+
+    <section class="preference-intro">
+
+        <span class="eyebrow">
+            PERSONALIZED TRAVEL
+        </span>
+
+        <h1>
+            Tell us how you like to travel.
+        </h1>
+
+        <p>
+            We'll compare your preferences with our
+            destination database and generate your
+            personalized recommendations.
+        </p>
+
+    </section>
+
+
+    <section class="preference-box">
+
+        <form id="preferenceForm">
+
+            <div class="form-grid">
+
+
+                <div class="input-group">
+
+                    <label for="state">
+                        Preferred State
+                    </label>
+
+                    <select id="state" required>
+
+                        <option value="">
+                            Select state
+                        </option>
+
+                        <option value="Maharashtra">
+                            Maharashtra
+                        </option>
+
+                        <option value="Goa">
+                            Goa
+                        </option>
+
+                        <option value="Rajasthan">
+                            Rajasthan
+                        </option>
+
+                        <option value="Kerala">
+                            Kerala
+                        </option>
+
+                        <option value="Himachal Pradesh">
+                            Himachal Pradesh
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="category">
+                        Travel Type
+                    </label>
+
+                    <select id="category" required>
+
+                        <option value="">
+                            Select category
+                        </option>
+
+                        <option value="Nature">
+                            Nature
+                        </option>
+
+                        <option value="Beach">
+                            Beach
+                        </option>
+
+                        <option value="Historical">
+                            Historical
+                        </option>
+
+                        <option value="Adventure">
+                            Adventure
+                        </option>
+
+                        <option value="Wildlife">
+                            Wildlife
+                        </option>
+
+                        <option value="Religious">
+                            Religious
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="budget">
+                        Maximum Budget
+                    </label>
+
+                    <select id="budget" required>
+
+                        <option value="">
+                            Select budget
+                        </option>
+
+                        <option value="5000">
+                            ₹5,000
+                        </option>
+
+                        <option value="10000">
+                            ₹10,000
+                        </option>
+
+                        <option value="20000">
+                            ₹20,000
+                        </option>
+
+                        <option value="30000">
+                            ₹30,000
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="activity">
+                        Preferred Activity
+                    </label>
+
+                    <select id="activity" required>
+
+                        <option value="">
+                            Select activity
+                        </option>
+
+                        <option value="Trekking">
+                            Trekking
+                        </option>
+
+                        <option value="Sightseeing">
+                            Sightseeing
+                        </option>
+
+                        <option value="Camping">
+                            Camping
+                        </option>
+
+                        <option value="Water Sports">
+                            Water Sports
+                        </option>
+
+                        <option value="Photography">
+                            Photography
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="season">
+                        Preferred Season
+                    </label>
+
+                    <select id="season" required>
+
+                        <option value="">
+                            Select season
+                        </option>
+
+                        <option value="Summer">
+                            Summer
+                        </option>
+
+                        <option value="Monsoon">
+                            Monsoon
+                        </option>
+
+                        <option value="Winter">
+                            Winter
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="duration">
+                        Trip Duration
+                    </label>
+
+                    <select id="duration" required>
+
+                        <option value="">
+                            Select duration
+                        </option>
+
+                        <option value="1-2">
+                            1–2 days
+                        </option>
+
+                        <option value="3-4">
+                            3–4 days
+                        </option>
+
+                        <option value="5-7">
+                            5–7 days
+                        </option>
+
+                        <option value="7+">
+                            7+ days
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button type="submit"
+                    class="primary-button full-button">
+
+                Find My Recommendations →
+
+            </button>
+
+            <p id="preferenceMessage"
+               class="form-message">
+            </p>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-bottom">
+        © 2026 TravelMate
+    </div>
+
+</footer>
+
+
+<script type="module"
+        src="../js/common.js"></script>
+
+<script type="module"
+        src="../js/preferences.js"></script>
+
+</body>
+
+</html>

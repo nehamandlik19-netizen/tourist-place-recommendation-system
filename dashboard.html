@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMate | Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="top-header">
+        <div class="header-container">
+            <div class="brand-wrapper">
+                <a href="../index.html" class="brand brand-black">
+                    <span class="brand-icon">✈</span>
+                    TravelMate
+                </a>
+                <span class="brand-tagline">AI-Powered Travel Discovery</span>
+            </div>
+
+            <form id="globalSearchForm" class="search-box">
+                <span>⌕</span>
+                <input type="text" id="globalSearch" placeholder="Search destinations, cities and experiences...">
+            </form>
+
+            <div class="header-actions">
+                <a href="favorites.html" class="header-link">♡ Favorites</a>
+                <button class="logout-button header-login">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub Navigation -->
+    <nav class="category-bar">
+        <div class="category-container">
+            <a href="../index.html">Home</a>
+            <a href="preferences.html">Personalized Trips</a>
+            <a href="recommendations.html">Destinations</a>
+            <a href="recommendations.html?category=Nature">Nature</a>
+            <a href="recommendations.html?category=Beach">Beaches</a>
+            <a href="recommendations.html?category=Historical">Heritage</a>
+            <a href="recommendations.html?category=Adventure">Adventure</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-page">
+
+        <section class="dashboard-welcome">
+            <span class="eyebrow">YOUR TRAVEL SPACE</span>
+            <h1>Plan your next adventure.</h1>
+            <p>Tell us what you love and TravelMate will discover destinations that match your preferences.</p>
+        </section>
+
+        <!-- Main Feature Cards Grid -->
+        <section class="dashboard-grid">
+
+            <div class="dashboard-card primary-dashboard-card">
+                <div class="card-content">
+                    <div class="dashboard-icon">✨</div>
+                    <h2>Get Personalized Recommendations</h2>
+                    <p>Choose your destination type, budget, activity, and preferred season.</p>
+                </div>
+                <a href="preferences.html" class="btn-red">Start Exploring →</a>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-content">
+                    <div class="dashboard-icon">🧭</div>
+                    <h2>Explore Destinations</h2>
+                    <p>Browse popular tourist destinations across India with detailed guides.</p>
+                </div>
+                <a href="recommendations.html" class="btn-red">Explore Places →</a>
+            </div>
+
+            <div class="dashboard-card">
+                <div class="card-content">
+                    <div class="dashboard-icon">♡</div>
+                    <h2>My Favorites</h2>
+                    <p>Quickly access the places you've saved for future trips.</p>
+                </div>
+                <a href="favorites.html" class="btn-red">View Favorites →</a>
+            </div>
+
+        </section>
+
+        <!-- Horizontal Quick Section -->
+       
+          <section class="quick-section">
+    <div class="section-heading-wrapper">
+        <span class="eyebrow">QUICK EXPLORE</span>
+        <h2 class="quick-heading">What kind of trip are you planning?</h2>
+    </div>
+
+    <div class="category-cards">
+        <a href="recommendations.html?category=Nature" class="category-card">
+            <span class="cat-icon">🌿</span>
+            <div class="cat-text">
+                <strong>Nature</strong>
+                <small>Hills & waterfalls</small>
+            </div>
+        </a>
+
+        <a href="recommendations.html?category=Beach" class="category-card">
+            <span class="cat-icon">🏖️</span>
+            <div class="cat-text">
+                <strong>Beaches</strong>
+                <small>Sun & sea</small>
+            </div>
+        </a>
+
+        <a href="recommendations.html?category=Historical" class="category-card">
+            <span class="cat-icon">🏰</span>
+            <div class="cat-text">
+                <strong>Heritage</strong>
+                <small>Forts & history</small>
+            </div>
+        </a>
+
+        <a href="recommendations.html?category=Adventure" class="category-card">
+            <span class="cat-icon">⛰️</span>
+            <div class="cat-text">
+                <strong>Adventure</strong>
+                <small>Thrills & trekking</small>
+            </div>
+        </a>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Column 1: Brand Info -->
+            <div class="footer-col brand-col">
+                <a href="../index.html" class="footer-logo">
+                    <span class="logo-icon">✈</span> TravelMate
+                </a>
+                <p class="footer-desc">
+                    Your intelligent travel partner. Discover personalized destinations, hidden gems, and tailored travel itineraries across India.
+                </p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Twitter">🌐</a>
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="Facebook">💬</a>
+                    <a href="#" aria-label="GitHub">💻</a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="recommendations.html">All Destinations</a></li>
+                    <li><a href="preferences.html">Personalized Planner</a></li>
+                    <li><a href="favorites.html">Saved Places</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Categories -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="recommendations.html?category=Nature">Nature & Hills</a></li>
+                    <li><a href="recommendations.html?category=Beach">Beaches & Coastal</a></li>
+                    <li><a href="recommendations.html?category=Historical">Heritage & Forts</a></li>
+                    <li><a href="recommendations.html?category=Adventure">Adventure Trips</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Account & Action -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Account</h4>
+                <ul class="footer-links">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li>
+                        <button class="logout-button footer-logout-btn">
+                            Logout
+                        </button>
+                    </li>
+                </ul>
+                
+                <div class="footer-cta-wrapper">
+                    <a href="preferences.html" class="footer-cta-btn">
+                        Get Recommendations →
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Copyright Line -->
+        <div class="footer-bottom-bar">
+            <div class="footer-bottom-container">
+                <p>© 2026 TravelMate — Tourist Place Recommendation System</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/common.js"></script>
+</body>
+
+</html>

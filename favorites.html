@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelMate | Favorites</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="header-container">
+            <a href="../index.html" class="brand">
+                <span class="brand-icon">✈</span>
+                TravelMate
+            </a>
+
+            <form id="globalSearchForm" class="search-box">
+                <span>⌕</span>
+                <input type="text" id="globalSearch" placeholder="Search destinations...">
+            </form>
+
+            <div class="header-actions">
+                <a href="dashboard.html" class="header-link">Dashboard</a>
+                <a href="recommendations.html" class="header-link">Explore</a>
+                <button class="logout-button">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-bar">
+        <div class="category-container">
+            <a href="../index.html">Home</a>
+            <a href="recommendations.html">Destinations</a>
+            <a href="favorites.html" class="active">♥ Favorites</a>
+        </div>
+    </nav>
+
+    <main class="favorites-page">
+
+        <section class="favorites-header">
+            <div>
+                <span class="eyebrow">YOUR TRAVEL COLLECTION</span>
+                <h1>My Favorite Destinations</h1>
+                <p>Keep track of the places you want to explore.</p>
+            </div>
+
+            <div class="favorite-count-box">
+                <span id="favoriteCount">0</span>
+                <small>Saved Places</small>
+            </div>
+        </section>
+
+        <section class="favorites-toolbar">
+            <div class="favorite-search">
+                <span>🔍</span>
+                <input type="text" id="favoriteSearch" placeholder="Search your favorites...">
+            </div>
+
+            <div class="favorite-filters">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Beach">Beach</option>
+                    <option value="Historical">Historical</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Wildlife">Wildlife</option>
+                    <option value="Religious">Religious</option>
+                </select>
+
+                <select id="sortFavorites">
+                    <option value="recent">Recently Saved</option>
+                    <option value="rating">Highest Rated</option>
+                    <option value="name">Name A-Z</option>
+                    <option value="budget-low">Budget Low to High</option>
+                    <option value="budget-high">Budget High to Low</option>
+                </select>
+            </div>
+        </section>
+
+        <div id="favoritesLoading" class="favorites-loading">
+            <div class="loader"></div>
+            <p>Loading your favorites...</p>
+        </div>
+
+        <section id="favoriteContainer" class="destination-grid"></section>
+
+        <section id="emptyFavorites" class="favorites-empty hidden">
+            <div class="favorites-empty-icon">♡</div>
+            <h2 style="margin-top: 0.5rem; margin-bottom: 0.5rem;">Your travel list is empty</h2>
+            <p>Save destinations you love and they will appear here.</p>
+            <a href="recommendations.html" class="primary-button">Explore Destinations →</a>
+        </section>
+
+        <section id="noFilterResults" class="favorites-empty hidden">
+            <div class="favorites-empty-icon">🔍</div>
+            <h2 style="margin-top: 0.5rem; margin-bottom: 0.5rem;">No matching destinations</h2>
+            <button id="clearFilters" class="outline-button">Clear Filters</button>
+        </section>
+
+    </main>
+
+    <script type="module" src="../js/common.js"></script>
+    <script type="module" src="../js/favorites.js"></script>
+
+</body>
+
+</html>
