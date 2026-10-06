@@ -1,0 +1,63 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper function to check if user is an admin
+    function isAdmin() {
+      return request.auth != null 
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == "admin";
+    }
+
+    // USERS COLLECTION
+    match /users/{userId} {
+      allow create: if request.auth != null && request.auth.uid == userId;
+      allow read, update: if request.auth != null && request.auth.uid == userId;
+      allow delete: if false;
+    }
+
+    // TOURIST PLACES COLLECTION
+    match /tourist_places/{placeId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // PREFERENCES COLLECTION
+    match /preferences/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // FAVORITES COLLECTION (SECURED)
+    match /favorites/{favoriteId} {
+      // Allows reading a favorite document only if it belongs to the authenticated user
+      allow get: if request.auth != null && resource.data.userId == request.auth.uid;
+      allow list: if request.auth != null && resource.data.userId == request.auth.uid;
+
+      allow create: if request.auth != null 
+        && request.resource.data.userId == request.auth.uid;
+
+      allow update, delete: if request.auth != null 
+        && resource.data.userId == request.auth.uid;
+    }
+
+    // USER RATINGS COLLECTION
+    match /user_ratings/{ratingId} {
+      // Anyone logged in can read ratings (useful for displaying average ratings on destination pages)
+      allow read: if request.auth != null;
+
+      allow create: if request.auth != null
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.rating >= 1
+        && request.resource.data.rating <= 5;
+
+      allow update: if request.auth != null
+        && resource.data.userId == request.auth.uid
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.rating >= 1
+        && request.resource.data.rating <= 5;
+
+      allow delete: if false;
+    }
+  }
+}
